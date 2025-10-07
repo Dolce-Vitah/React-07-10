@@ -33,7 +33,7 @@ const App: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='app'>
       <h1>Список задач</h1>
       <TaskForm onAddTask={addTask} />
       <TaskList
@@ -41,7 +41,7 @@ const App: React.FC = () => {
         onDeleteTask={deleteTask}
         onToggleComplete={toggleComplete}
       />
-      <div style={{ marginTop: '20px', fontStyle: 'italic' }}>
+      <div className="task-info" style={{ marginTop: '20px', fontStyle: 'italic' }}>
         <p>
           <strong>Текущая задача:</strong>{' '}
           {currentTask ? currentTask.title : 'Нет'}

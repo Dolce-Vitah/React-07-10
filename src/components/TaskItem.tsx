@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Task } from '../types/task';
+import '../styles/TaskItem.css'
 
 interface TaskItemProps {
   task: Task;
@@ -14,7 +15,7 @@ const TaskItem: React.FC<TaskItemProps> = ({ task, onDelete, onToggleComplete })
   };
 
   return (
-    <li>
+    <li className={`task-item ${task.completed ? 'completed' : ''}`}>
       <span style={taskStyle}>{task.title}</span>
       <input
         type="checkbox"
